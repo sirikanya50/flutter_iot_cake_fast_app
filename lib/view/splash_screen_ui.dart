@@ -43,7 +43,7 @@ class _SplashScreenUiState extends State<SplashScreenUi> {
                 style: TextStyle(
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
-                  color: const Color.fromARGB(255, 255, 225, 74),
+                  color: const Color.fromARGB(255, 145, 14, 43),
                 ),
               ),
               SizedBox(height: 5),

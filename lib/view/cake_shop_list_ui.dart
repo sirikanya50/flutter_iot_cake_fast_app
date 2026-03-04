@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iot_cake_fast_app/models/cake_shop.dart';
+import 'package:flutter_iot_cake_fast_app/view/cake_shop_detail.dart';
  
 class CakShoopListUi extends StatefulWidget {
   const CakShoopListUi({super.key});
@@ -134,9 +135,9 @@ class _CakShoopListUiState extends State<CakShoopListUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 255, 0, 0),
+        backgroundColor: const Color.fromARGB(255, 70, 3, 25),
         title: Text(
-          'สายด่วนกินเค้ก',
+          'มูมมามเค้กคึ',
           style: TextStyle(
             color: Colors.white,
           ),
@@ -178,7 +179,16 @@ class _CakShoopListUiState extends State<CakShoopListUi> {
                 },
                 itemBuilder: (context, index) {
                   return ListTile(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>CakeShopDetail(
+                            cakeShopDetail: cakeShops[index],
+                          ),
+                        ),
+                      );
+                    },
                     leading: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
                       child: Image.asset(
